@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.task4.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <ImageView fx:id="screen" fitWidth="400" fitHeight="400" preserveRatio="true"/>
+
+    <!-- Кнопка для запуска/остановки анимации -->
+    <Button text="Старт/Стоп" onAction="#toggleAnimation" style="-fx-background-color: yellow;" />
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Предыдущая" onAction="#preview" style="-fx-background-color: pink;" />
+        <Button text="Следующая" onAction="#next" style="-fx-background-color: pink;" />
+    </HBox>
+    <!-- Текстовое поле для задания времени задержки -->
+    <TextField fx:id="delayField" promptText="Задержка в миллисекундах" />
+    <Button text="Задать задержку " onAction="#updateDelay" style="-fx-background-color: green;" />
+
+</VBox>
